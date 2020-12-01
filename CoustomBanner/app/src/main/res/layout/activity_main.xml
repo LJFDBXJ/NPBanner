@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.morteshka.MainActivity">
+    <com.morteshka.MZBannerView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="10dp"
+        app:canLoop="true"
+        app:indicatorAlign="center"
+        app:indicatorPaddingBottom="50dp"
+        app:indicatorPaddingLeft="10dp"
+        app:middle_page_cover="true"
+        app:open_mz_mode="true" />
+    <com.morteshka.MZBannerView
+        android:id="@+id/bannerNormal"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        app:open_mz_mode="false"
+        app:canLoop="true"
+        app:indicatorAlign="center"
+        />
+</LinearLayout>
