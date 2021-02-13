@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NPBannerView">
+        <attr name="canLoop" format="boolean" />
+        <attr name="indicatorPaddingLeft" format="dimension" />
+        <attr name="indicatorPaddingRight" format="dimension" />
+        <attr name="indicatorPaddingTop" format="dimension" />
+        <attr name="indicatorPaddingBottom" format="dimension" />
+        <attr name="indicatorIsVisibility">
+            <enum name="visibility" value="0" />
+            <enum name="gone" value="8" />
+        </attr>
+        <attr name="indicatorAlign">
+            <enum name="start" value="0" />
+            <enum name="center" value="1" />
+            <enum name="end" value="2" />
+        </attr>
+        <attr name="transformerType">
+            <enum name="CoverModeTransformer" value="0" />
+            <enum name="ScaleYTransformer" value="1" />
+            <enum name="HorizontalStackTransformerWithRotation" value="2" />
+            <enum name="DepthPageTransformer" value="3" />
+            <enum name="ZoomOutPageTransformer" value="4" />
+            <enum name="ViewPagerTransformer" value="5" />
+
+        </attr>
+    </declare-styleable>
+    <item name="mz_banner_item_tag" type="id" />
+    <string name="app_name">MZBanner</string>
+</resources>

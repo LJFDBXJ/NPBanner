@@ -1,29 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.morteshka.MainActivity">
-    <com.morteshka.MZBannerView
-        android:id="@+id/banner"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:layout_marginTop="10dp"
-        app:canLoop="true"
-        app:indicatorAlign="center"
-        app:indicatorPaddingBottom="50dp"
-        app:indicatorPaddingLeft="10dp"
-        app:middle_page_cover="true"
-        app:open_mz_mode="true" />
-    <com.morteshka.MZBannerView
-        android:id="@+id/bannerNormal"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="10dp"
-        app:open_mz_mode="false"
-        app:canLoop="true"
-        app:indicatorAlign="center"
-        />
-</LinearLayout>
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context="com.npbanner.MainActivity">
+
+            <com.dml.npbanner.NPBannerView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="10dp"
+                app:canLoop="true"
+                app:indicatorAlign="start"
+                app:indicatorIsVisibility="visibility"
+                app:indicatorPaddingBottom="10dp"
+                app:indicatorPaddingLeft="10dp"
+                app:transformerType="CoverModeTransformer" />
+
+            <com.dml.npbanner.NPBannerView
+                android:id="@+id/bannerNormal"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:canLoop="true"
+                app:indicatorAlign="center"
+                app:indicatorIsVisibility="gone" />
+
+            <com.dml.npbanner.NPBannerView
+                android:id="@+id/bannerScale"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:canLoop="true"
+                app:indicatorAlign="center"
+                app:indicatorIsVisibility="gone"
+                app:transformerType="ScaleYTransformer" />
+
+
+            <com.dml.npbanner.NPBannerView
+                android:id="@+id/horizotal"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:canLoop="true"
+                app:indicatorAlign="center"
+                app:indicatorIsVisibility="gone"
+                app:transformerType="HorizontalStackTransformerWithRotation" />
+
+            <com.dml.npbanner.NPBannerView
+                android:id="@+id/depth"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:canLoop="true"
+                app:indicatorAlign="center"
+                app:indicatorIsVisibility="visibility"
+                app:transformerType="DepthPageTransformer" />
+
+            <com.dml.npbanner.NPBannerView
+                android:id="@+id/zoomOut"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:canLoop="true"
+                app:indicatorAlign="center"
+                app:indicatorIsVisibility="gone"
+                app:transformerType="ZoomOutPageTransformer" />
+
+            <com.dml.npbanner.NPBannerView
+                android:id="@+id/scaleX"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:canLoop="true"
+                app:indicatorAlign="center"
+                app:indicatorIsVisibility="gone"
+                app:transformerType="ViewPagerTransformer" />
+
+
+            <com.bartoszlipinski.flippablestackview.FlippableStackView
+                android:id="@+id/wordRecycler"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:background="@color/black"
+                android:clipToPadding="false"
+                app:layout_constraintDimensionRatio="w,1:1" />
+        </LinearLayout>
+    </ScrollView>
+
+</layout>
